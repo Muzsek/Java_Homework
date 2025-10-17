@@ -2,7 +2,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class DolgozoBeolvasas
@@ -25,9 +24,8 @@ public class DolgozoBeolvasas
                 int munkaido = Integer.parseInt(adat[3].trim());
                 int alapVoraber = Integer.parseInt(adat[4].trim());
                 int tuloraPotlek = Integer.parseInt(adat[5].replaceAll("[%]","").trim());
-                // Mivel a te Dolgozo osztályod több paramétert kér,
-                // ideiglenesen 0-kat adunk az extra mezőkhöz
-                Dolgozo d = new Dolgozo(azonosito,nev,beosztas,munkaido,alapVoraber,tuloraPotlek);
+
+                Dolgozo d = new Dolgozo(azonosito,nev,beosztas,munkaido,alapVoraber,tuloraPotlek,0,0);
                 dolgozok.add(d);
             }
         }

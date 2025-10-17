@@ -8,8 +8,10 @@ public class Dolgozo
     private int munkaido;
     private int berezes;
     private int tuloraPotlek;
+    private int ledolgozottEloirt;
+    public int osszeMunkaIdo;
 
-    public Dolgozo(String azonosito, String nev, String beosztas, int munkaido,int berezes, int tuloraPotlek)
+    public Dolgozo(String azonosito, String nev, String beosztas, int munkaido,int berezes, int tuloraPotlek, int ledolgozottEloirt, int osszeMunkaIdo)
     {
         setAzonosito(azonosito);
         setNev(nev);
@@ -17,7 +19,8 @@ public class Dolgozo
         setMunkaido(munkaido);
         setBerezes(berezes);
         setTuloraPotlek(tuloraPotlek);
-        //setLedolgozottEloirt(ledolgozottEloirt);
+        setLedolgozottEloirt(ledolgozottEloirt);
+        this.osszeMunkaIdo = osszeMunkaIdo;
         //setNemledolgozottEloir(nemledolgozottEloir);
         //setLedolgozottTulora(ledolgozottTulora);
     }
@@ -46,10 +49,10 @@ public class Dolgozo
 
     int getTuloraPotlek() { return tuloraPotlek; }
     void setTuloraPotlek(int tuloraPotlek) { this.tuloraPotlek = tuloraPotlek; }
-    /*
+
     int getLedolgozottEloirt() { return ledolgozottEloirt; }
     void setLedolgozottEloirt(int ledolgozottEloirt) { this.ledolgozottEloirt = ledolgozottEloirt; }
-
+    /*
     int getNemledolgozottEloir() { return nemledolgozottEloir; }
     void setNemledolgozottEloir(int nemledolgozottEloir) { this.nemledolgozottEloir = nemledolgozottEloir; }
 
@@ -59,6 +62,6 @@ public class Dolgozo
     @Override
     public String toString()
     {
-        return String.format("%s\t%s\t%s\t%d\t%d\t%d",azonosito,nev,beosztas,munkaido,berezes,tuloraPotlek);
+        return String.format("%s\t%s\t%s\t%d\t%d\t%d\t%d/%d",azonosito,nev,beosztas,munkaido,berezes,tuloraPotlek,ledolgozottEloirt,osszeMunkaIdo);
     }
 }

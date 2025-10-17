@@ -11,7 +11,7 @@ public class Main
         //System.out.println(dolgozo.toString());
 
         List<Dolgozo> dolgozok = DolgozoBeolvasas.beolvas("data/Workers.csv");
-
+        TelephelyBeolvasas.beolvasTelephely("data/Site_1.csv",dolgozok);
         for(Dolgozo d : dolgozok)
         {
             System.out.println(d);
